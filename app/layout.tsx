@@ -27,7 +27,7 @@ export default function RootLayout({
         <header className="text-white backdrop-blur-2xl sticky bg-accent px-7 md:px-16 lg:px-28 flex justify-between items-center py-4">
           <p className="">header</p>
           <nav className="flex gap-4">
-            <Link href=''>Lorem</Link>
+            <Link href='/create-resume'>Lorem</Link>
             <Link href=''>Lorem</Link>
             <Link href=''>Lorem</Link>
           </nav>
@@ -58,7 +58,7 @@ export default function RootLayout({
             </Button>
           </motion.div>
         )}
-        <main className="px-7 md:px-16 lg:px-28 flex flex-col gap-20">
+        <main className="px-7 pt-14 md:px-16 lg:px-28 flex flex-col gap-20">
           {children}
         </main>
       </body>

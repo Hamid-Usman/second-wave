@@ -2,12 +2,12 @@ import Image from "next/image";
 import './globals.css'
 import ButtonLink from "./UI/link";
 import AlterLink from "./UI/buttonAlter";
-import Card from "./components/card";
+import Card from "../components/card";
 import { FiCreditCard, FiMail, FiUser, FiUsers } from "react-icons/fi";
 export default function Home() {
   return (
     <>
-    <section className="text-center mt-20 lg:px-19 animate-fadeIn flex flex-col gap-7 items-center">
+    <section className="text-center lg:px-19 animate-fadeIn flex flex-col gap-7 items-center">
       <div className="w-fit px-3 rounded-full text-dark font-semibold flex items-center gap-2">
         <div className="animate-pulse bg-primary w-[10px] h-[10px] rounded-full"></div>
         <p>path to cleaner enviroment, from trash to gold</p>
@@ -23,17 +23,21 @@ export default function Home() {
     </section>
 
     <section className="">
-      <h3 className="text-center text-[36px] font-bold">Build your cv with relative ease</h3>
+      <h3 className="text-center text-[36px] font-bold">Build ATS-Compliant CVs With Relative Ease</h3>
       <p className="text-center text-grey">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quo tempore consequuntur a consequatur nesciunt, ab numquam laborum.</p>
           <div className="grid gap-4 grid-cols-2 lg:grid-cols-4">
             <Card title="Feature"  subtitle="Manage"  href="#" Icon={FiUser}/>
             <Card title="Feature" subtitle="Manage" href="#" Icon={FiMail} />
             <Card title="Feature" subtitle="Manage" href="#" Icon={FiUsers} />
-            <Card title="Feature"  subtitle="Manage"  href="#" Icon={FiCreditCard}
-            />
+            <Card title="Feature"  subtitle="Manage"  href="#" Icon={FiCreditCard}/>
+            <Card title="Feature"  subtitle="Manage"  href="#" Icon={FiUser}/>
+            <Card title="Feature" subtitle="Manage" href="#" Icon={FiMail} />
+            <Card title="Feature" subtitle="Manage" href="#" Icon={FiUsers} />
+            <Card title="Feature"  subtitle="Manage"  href="#" Icon={FiCreditCard}/>
           </div>
         
     </section>
+    
     </>
   );
 }

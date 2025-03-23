@@ -1,6 +1,6 @@
 interface ButtonProp {
-    onClick: () => void;
-    className: string;
+    onClick?: () => void;
+    className?: string;
     children: React.ReactNode;
 }
 

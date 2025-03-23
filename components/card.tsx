@@ -36,12 +36,12 @@ interface CardType {
 const Card = ({ title, subtitle, Icon, href }: CardType) => {
   return (
     <div
-      className=" active:bg-gradient-to-r active:text-white from-primary to-accent translate-y-[100%] group-hover:translate-y-[0%] w-full p-4 rounded border-[1px] border-slate-300 relative overflow-hidden group bg-white"
+      className="inset-0 active:bg-gradient-to-r  from-primary to-accent transition-transform duration-300 active:text-white translate-y-[100%] group-hover:translate-y-[0%] w-full p-4 rounded border-[1px] border-slate-300 relative overflow-hidden group bg-white"
     >
     <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent translate-y-[100%] group-hover:translate-y-[0%] transition-transform duration-300" />
 
-      <Icon className="absolute z-10 -top-12 -right-12 text-9xl text-slate-100 group-hover:rotate-12 transition-transform duration-300" />
-      <Icon className="mb-2 text-2xl text-secondary  transition-colors relative z-10 duration-300" />
+      <Icon className="absolute z-10 -top-12 -right-12 text-9xl text-slate-100 group-hover:rotate-12 group-active:rotate-12 transition-transform duration-300" />
+      <Icon className="mb-2 text-2xl text-secondary group-hover:text-white group-active:text-white transition-colors relative z-10 duration-300" />
       <h3 className="font-medium text-lg  group-hover:text-white relative z-10 duration-300">
         {title}
       </h3>
