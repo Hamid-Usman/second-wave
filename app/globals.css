@@ -7,5 +7,30 @@
   --color-tertiary: #003459; /* Dark Blue */
   --color-accent: #00171F; /* Deep Navy */
   --color-neutral: #FFFFFF; /* White */
+  --color-grey: #8e9aaf;
+
+  
+  --animate-wiggle: wiggle 1s ease-in-out infinite;
+  --animate-fadeIn: fadeIn 2s ease-in-out;
+  @keyframes wiggle {
+    0%
+    100% {
+      transform: rotate(-3deg);
+    }
+    50% {
+      transform: rotate(3deg);
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
 }

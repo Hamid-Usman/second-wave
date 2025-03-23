@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body
       >
-        <header className="text-white backdrop-blur-2xl sticky bg-accent px-7 md:px-24 lg:px-40 flex justify-between items-center py-4">
+        <header className="text-white backdrop-blur-2xl sticky bg-accent px-7 md:px-16 lg:px-28 flex justify-between items-center py-4">
           <p className="">header</p>
           <nav className="flex gap-4">
             <Link href=''>Lorem</Link>
@@ -58,7 +58,7 @@ export default function RootLayout({
             </Button>
           </motion.div>
         )}
-        <main className="px-7 md:px-24 lg:px-40">
+        <main className="px-7 md:px-16 lg:px-28 flex flex-col gap-20">
           {children}
         </main>
       </body>

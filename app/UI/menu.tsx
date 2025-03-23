@@ -4,7 +4,7 @@ import { MotionConfig, motion } from "framer-motion";
 
 export const MenuButton = ({ onClick }: { onClick: () => void }) => {
   return (
-    <div onClick={onClick} className="grid place-content-center bg-gradient-to-br from-primary to-tertiary">
+    <div onClick={onClick} className="md:hidden grid place-content-center bg-gradient-to-br from-primary to-tertiary">
       <AnimatedHamburgerButton />
     </div>
   );
