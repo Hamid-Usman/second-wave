@@ -2,10 +2,10 @@
 
 @theme {
   /* Brand */
-  --color-primary: #3E8914;
-  --color-secondary: #3DA35D;
-  --color-accent: #96E072;
-  --color-dark: #134611;
-  --color-light: #E8FCCF;
+  --color-primary: #00A7E1; /* Bright Blue */
+  --color-secondary: #007EA7; /* Teal Blue */
+  --color-tertiary: #003459; /* Dark Blue */
+  --color-accent: #00171F; /* Deep Navy */
+  --color-neutral: #FFFFFF; /* White */
 
 }
