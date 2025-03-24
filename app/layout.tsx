@@ -22,7 +22,7 @@ export default function RootLayout({
   
   return (
     <html lang="en">
-      <body
+      <body className="overflow-x-hidden"
       >
         <header className="text-white backdrop-blur-2xl sticky bg-accent px-7 md:px-16 lg:px-28 flex justify-between items-center py-4">
           <p className="">header</p>
