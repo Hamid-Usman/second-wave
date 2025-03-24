@@ -9,6 +9,7 @@ import { yupResolver } from "@hookform/resolvers/yup"
 import { AnimatePresence, motion } from "framer-motion"
 import { useState } from "react"
 import Expertise from "./sections/expertise"
+import FormHeader from "@/components/header/resumeHeader"
 
 const schemas: Array<any> =[Schemas1, Schemas2]
 export default function Load(){
@@ -27,7 +28,7 @@ export default function Load(){
     const slideRight = {
         initial: {
             opacity: 0,
-            x: "20vw",
+            x: "50vw",
         },
         in: {
             opacity: 1,
@@ -35,14 +36,14 @@ export default function Load(){
         },
         out: {
             opacity: 0,
-            x: "20vw",
+            x: "50vw",
         },
     };
     
     const slideLeft = {
         initial: {
             opacity: 0,
-            x: "-20vw",
+            x: "-50vw",
         },
         in: {
             opacity: 1,
@@ -50,7 +51,7 @@ export default function Load(){
         },
         out: {
             opacity: 0,
-            x: "-20vw",
+            x: "-50vw",
         },
     };
     const pageTransition = {
@@ -69,8 +70,8 @@ export default function Load(){
                     variants={slideLeft}
                     transition={pageTransition}
                     className="flex flex-col text-center lg:text-start gap-4 sm:w-[550px]">
-                        <h1 className="text-3xl font-bold text-accent">Get Started Creating Your Resume</h1>
-                        <p className="text-grey">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur cupiditate aspernatur dolor error autem nam? Eius tempore saepe amet ratione corrupti, aut iure architecto?</p>
+                        {page === 1 && <FormHeader heading="Personal Info" subHeading="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid illo, natus suscipit assumenda dolor, nemo fugiat excepturi, adipisci vitae omnis deleniti magni error eius accusantium. Architecto, ipsam? Perspiciatis, amet cum?" />}
+                        {page === 2 && <FormHeader heading="Key skills" subHeading="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid illo, natus suscipit assumenda dolor, nemo fugiat excepturi, adipisci vitae omnis deleniti magni error eius accusantium. Architecto, ipsam? Perspiciatis, amet cum?" />}
                 
                 </motion.div>
             </AnimatePresence>
