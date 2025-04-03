@@ -1,19 +1,21 @@
 "use client"
-import "../globals.css"
-import Button from "../UI/button"
-import PersonalInfos from "./sections/personal-Infos"
-import { FormProvider, useForm } from "react-hook-form"
-import Schemas1 from "./schemas/schema1"
-import Schemas2 from "./schemas/schemas2"
-import { yupResolver } from "@hookform/resolvers/yup"
-import { AnimatePresence, motion } from "framer-motion"
-import { useState } from "react"
-import Expertise from "./sections/expertise"
-import FormHeader from "@/components/header/resumeHeader"
+import "../globals.css";
+import Button from "../UI/button";
+import PersonalInfos from "./sections/personal-Infos";
+import { FormProvider, useForm } from "react-hook-form";
+import Schemas1 from "./schemas/schema1";
+import Schemas2 from "./schemas/schemas2";
+import Schemas3 from "./schemas/schemas3";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
+import Expertise from "./sections/expertise";
+import FormHeader from "@/components/header/resumeHeader";
+import Experience from "./sections/experience";
 
-const schemas: Array<any> =[Schemas1, Schemas2]
+const schemas: Array<any> =[Schemas1, Schemas2, Schemas3]
 export default function Load(){
-    const [page, setPage] = useState(2)
+    const [page, setPage] = useState(3)
 
     const methods = useForm({
         resolver: yupResolver(schemas[page - 1]),
@@ -39,7 +41,7 @@ export default function Load(){
             x: "50vw",
         },
     };
-    
+
     const slideLeft = {
         initial: {
             opacity: 0,
@@ -57,7 +59,7 @@ export default function Load(){
     const pageTransition = {
         type: "tween",
         ease: "anticipate",
-        duration: 1.3,
+        duration: 0.8,
     };
     return (
         <div className="flex flex-col lg:flex-row gap-4 xl:gap-40">
@@ -72,7 +74,7 @@ export default function Load(){
                     className="flex flex-col text-center lg:text-start gap-4 sm:w-[550px]">
                         {page === 1 && <FormHeader heading="Personal Info" subHeading="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid illo, natus suscipit assumenda dolor, nemo fugiat excepturi, adipisci vitae omnis deleniti magni error eius accusantium. Architecto, ipsam? Perspiciatis, amet cum?" />}
                         {page === 2 && <FormHeader heading="Key skills" subHeading="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid illo, natus suscipit assumenda dolor, nemo fugiat excepturi, adipisci vitae omnis deleniti magni error eius accusantium. Architecto, ipsam? Perspiciatis, amet cum?" />}
-                
+                        {page === 3 && <FormHeader heading="Experience" subHeading="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid illo, natus suscipit assumenda dolor, nemo fugiat excepturi, adipisci vitae omnis deleniti magni error eius accusantium. Architecto, ipsam? Perspiciatis, amet cum?" />}
                 </motion.div>
             </AnimatePresence>
             <FormProvider {...methods}>
@@ -88,10 +90,10 @@ export default function Load(){
                         >
                             {page === 1 && <PersonalInfos register={register} errors={errors} />}
                             {page === 2 && <Expertise register={register} errors={errors} />}
-                            
+                            {page === 3 && <Experience register={register} errors={errors} />}
 
-                            {page === 2 && <Button className="border-solid hover:bg-primary">Next</Button>}
-                            {page < 2 && <Button onClick={() => handleSubmit(() => setPage(page + 1))()} className="bg-primary" >Next</Button>}
+                            {page === 3 && <Button onClick={() => handleSubmit((onSubmit))}  className="border-solid hover:bg-primary">Submit</Button>}
+                            <Button onClick={() => handleSubmit(() => setPage(page + 1))()} className="bg-primary" >Next</Button>
                             {page > 1 && <Button className="bg-white" onClick={() => setPage(page - 1)}>Previous</Button>}
                     </motion.form>
                 </AnimatePresence>

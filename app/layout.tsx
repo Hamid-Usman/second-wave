@@ -25,7 +25,7 @@ export default function RootLayout({
       <body className="overflow-x-hidden"
       >
         <header className="text-white backdrop-blur-2xl sticky bg-accent px-7 md:px-16 lg:px-28 flex justify-between items-center py-4">
-          <p className="">header</p>
+          <Link href={'/'} className="">header</Link>
           <nav className="flex gap-4">
             <Link href='/create-resume'>Lorem</Link>
             <Link href=''>Lorem</Link>

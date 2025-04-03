@@ -3,7 +3,7 @@ interface InputProp {
     label: string;
     placeholder: string;
     register?: any;
-    error: string
+    error?: string
 }
 export default function FormArea({label, placeholder, register, error}: InputProp) {
     return (
